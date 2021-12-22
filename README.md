@@ -111,7 +111,7 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 ## Wireframes
 
-<img src="Codepath_screenshot2.PNG" width=500>
+<img src="SC_Digital Wireframes.PNG" width=500>
 URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
 
 ### Interactive Prototype
