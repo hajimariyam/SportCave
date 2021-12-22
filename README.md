@@ -117,8 +117,7 @@ URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
 
 ### Interactive Prototype
 
-<img src="wireframes.gif" width=400>
-URL : https://imgur.com/a/WWjdWS2
+<img src="SC_Interactive Prototype" width=400>
 
 ## Schema 
 ### Models
