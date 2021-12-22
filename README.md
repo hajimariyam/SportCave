@@ -82,7 +82,7 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 * Creation - Social
     * [x] Accept and validate text field input for new reaction
-    * [x] Send request to Parse server to create new item and attribute to logged in user
+    * [x] Send POST request to Parse server to create new item and attribute to logged in user
     * [x] Manually insert newly posted reaction in Social stream so it is immediately visible without the need for a full refresh 
     
 * Profile
@@ -91,7 +91,7 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
     * [x] Launch smartphone camera to take new profile photo
     * [x] Use the bitmap to display a preview of the photo in the image view 
     * [x] Use text field input to modify profile information
-    * [x] Send request to Parse server to save updated profile information for logged in user
+    * [x] Send PUT request to Parse server to save updated profile information for logged in user
     * [x] Allow user to sign out of their account
 
 ### 3. Navigation
