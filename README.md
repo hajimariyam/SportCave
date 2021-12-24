@@ -41,7 +41,7 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 * [x] Create and update actions are changed in real-time
 * [x] User can search reactions in the Social feed
-* [ ] User can post photos to Social feed
+* [x] User can post photos to Social feed
 * [ ] User can click a reaction to view the user profile
 * [ ] User can pull to refresh for real-time Sports and Social data
 * [ ] User can favorite sports rather than manually entering them in the Profile
@@ -77,11 +77,13 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 * Stream - Social
     * [x] Query Parse server to retrieve reactions posted by any user, including 'created at' datetime and profile photos
     * [x] Display 'created at' datetime in relative format
-    * [x] Use Glide to display user profile photos in fixed square size
+    * [x] Use Glide to display user profile photos and photo attachments in fixed size
     * [x] Use search bar to query Parse server and retrieve a filtered list of reactions
+    * [x] 
 
 * Creation - Social
-    * [x] Accept and validate text field input for new reaction
+    * [x] Accept and validate user input for new reaction
+    * [x] Save attached photo as Parse file and display file name for user confirmation
     * [x] Send POST request to Parse server to create new item and attribute to logged in user
     * [x] Manually insert newly posted reaction in Social stream so it is immediately visible without the need for a full refresh 
     
@@ -136,12 +138,13 @@ URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
    
 #### Reaction
 
-   | Property     | Type     | Description |
-   | -------------| -------- | ------------|
-   | objectId     | String   | unique id for the comment (default field) |
-   | user         | Pointer  | pointer to objectId (from User class) of user posting comment |
-   | comment      | String   | comment text |
-   | createdAt    | DateTime | date/time when post is created |
+   | Property        | Type     | Description |
+   | -------------   | -------- | ------------|
+   | objectId        | String   | unique id for the comment (default field) |
+   | user            | Pointer  | pointer to objectId (from User class) of user posting comment |
+   | comment         | String   | comment text |
+   | createdAt       | DateTime | date/time when post is created |
+   | photoReaction   | File     | optional photo attached to reaction post |
 
 ### Networking
 * Games / Scores Page
