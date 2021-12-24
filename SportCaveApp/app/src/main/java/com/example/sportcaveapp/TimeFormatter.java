@@ -19,7 +19,6 @@ public class TimeFormatter {
         SimpleDateFormat format = new SimpleDateFormat(dbFormat, Locale.ENGLISH);
         format.setLenient(true);
         try {
-            System.out.println(dbDate);
             long diff = (System.currentTimeMillis() - format.parse(dbDate).getTime()) / 1000;
             if (diff < 5)
                 time = "Now";

@@ -1,11 +1,13 @@
 package com.example.sportcaveapp;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +22,7 @@ import java.util.List;
 
 public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.ViewHolder> {
 
+    public static final String TAG = "ReactionsAdapter";
     private Context context;
     private List<Reaction> reactions;
 
@@ -53,6 +56,7 @@ public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.View
         private TextView tvName;
         private TextView tvComment;
         private TextView tvCreatedAt;
+        private ImageView ivReactionImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +65,7 @@ public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.View
             tvName = itemView.findViewById(R.id.tvName);
             tvComment = itemView.findViewById(R.id.tvComment);
             tvCreatedAt = itemView.findViewById(R.id.tvCreatedAt);
+            ivReactionImage = itemView.findViewById(R.id.ivReactionImage);
         }
 
         public void bind(Reaction reaction) {
@@ -72,6 +77,9 @@ public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.View
                 Glide.with(context).load(reaction.getUser().getParseFile("profilePicture").getUrl()).into(ivProfileImage); }
             else {
                 Glide.with(context).load(R.drawable.user).into(ivProfileImage); }
+            if (reaction.getPhotoReaction() != null) {
+                Log.i(TAG, "Posting photo for: " + reaction.getComment());
+                Glide.with(context).load(reaction.getPhotoReaction().getUrl()).into(ivReactionImage); }
         }
     }
 }
