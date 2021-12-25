@@ -1,6 +1,8 @@
 package com.example.sportcaveapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,9 @@ import com.parse.ParseUser;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.regex.Pattern;
+
+import static com.parse.Parse.getApplicationContext;
 
 public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.ViewHolder> {
 
@@ -70,6 +75,15 @@ public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.View
 
         public void bind(Reaction reaction) {
             tvUser.setText("@"+reaction.getUser().getUsername());
+            new PatternEditableBuilder().
+                    addPattern(Pattern.compile("\\@(\\w+)"), Color.BLACK,
+                            new PatternEditableBuilder.SpannableClickedListener() {
+                                @Override
+                                public void onSpanClicked(String username) {
+                                    Log.i(TAG, "Clicked username: " + username);
+                                    goUserProfile(username);
+                                }
+                            }).into(tvUser);
             tvName.setText(reaction.getUser().get("profileName").toString());
             tvComment.setText(reaction.getComment());
             tvCreatedAt.setText(TimeFormatter.getTimeDifference(reaction.getCreatedAt().toString()));
@@ -81,5 +95,9 @@ public class ReactionsAdapter extends RecyclerView.Adapter<ReactionsAdapter.View
                 Log.i(TAG, "Posting photo for: " + reaction.getComment());
                 Glide.with(context).load(reaction.getPhotoReaction().getUrl()).into(ivReactionImage); }
         }
+    }
+
+    private void goUserProfile(String username) {
+        context.startActivity(new Intent(context, UserProfile.class).putExtra("username", username));
     }
 }
