@@ -56,7 +56,7 @@ public class UserProfile extends AppCompatActivity {
         tvName.setText(user.get("profileName").toString());
         tvUsername.setText("@"+user.getUsername());
         tvEmail.setText(user.getEmail());
-        tvFavSports.setText(user.get("favSports").toString());
+        tvFavSports.setText(user.get("mySports").toString().replace("[", "").replace("]", ""));
     }
 
 }
