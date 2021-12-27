@@ -40,21 +40,10 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:drawablePadding="10dp"
-        android:hint="Email"
-        android:text="example@gmail.com"
-        android:textSize="18sp"
-        app:drawableStartCompat="@drawable/ic_baseline_email_24" />
-
-    <TextView
         android:id="@+id/tvFavSports"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:drawablePadding="10dp"
         android:hint="Favorite sports not added!"
         android:textSize="18sp"

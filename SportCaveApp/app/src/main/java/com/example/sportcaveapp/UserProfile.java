@@ -23,7 +23,6 @@ public class UserProfile extends AppCompatActivity {
     ImageView ivProfile;
     TextView tvName;
     TextView tvUsername;
-    TextView tvEmail;
     TextView tvFavSports;
 
     @Override
@@ -34,7 +33,6 @@ public class UserProfile extends AppCompatActivity {
         ivProfile = (ImageView) findViewById(R.id.ivProfile);
         tvName = (TextView) findViewById(R.id.tvName);
         tvUsername = (TextView) findViewById(R.id.tvUsername);
-        tvEmail = (TextView) findViewById(R.id.tvEmail);
         tvFavSports = (TextView) findViewById(R.id.tvFavSports);
 
         String username = getIntent().getExtras().getString("username").split("\\@")[1];
@@ -55,7 +53,6 @@ public class UserProfile extends AppCompatActivity {
             Glide.with(this).load(R.drawable.user).into(ivProfile); }
         tvName.setText(user.get("profileName").toString());
         tvUsername.setText("@"+user.getUsername());
-        tvEmail.setText(user.getEmail());
         tvFavSports.setText(user.get("mySports").toString().replace("[", "").replace("]", ""));
     }
 
