@@ -69,7 +69,7 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
     * Allow user to select from a range of provided sports
     * Display text (sports names)
     * Use the Glide library to display media (sports icons)
-    * Allow user to use buttons to add or remove a sport from their favorites
+    * Send PUT request to Parse server to add or remove a sport from the user's favorites based on their click of buttons
 
 * Detail - Games / Scores
     * Use the AsyncHttpClient library to make network requests to each sport API and retrieve games and scores for the selected sport
