@@ -167,6 +167,6 @@ URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
 
 ## SportCave App - (12/27/21)
 
-<img src="SC_Current_12-27.gif" width=200><br>
+<img src="SC_12-27.gif" width=200><br>
 
 
