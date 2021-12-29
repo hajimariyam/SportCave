@@ -15,7 +15,7 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 ### App Evaluation
 - **Category:** Sports / Social
-- **Mobile:** Check for scoring updates and post reactions on-the-go, use camera/gallery to post photos to reactions feed and update profile photo.
+- **Mobile:** Check for scoring updates and post reactions on-the-go; use camera/gallery to post photos to Social stream and update profile photo.
 - **Story:** SportCave allows users to receive updates for different sports in one location rather than scouring different platforms for each sport.
 - **Market:** Any sports fan would enjoy this app. Present sports scores apps do not allow for individual user accounts and social interaction; on SportCave,  users can connect with fellow fans by sharing reactions.
 - **Habit:**  Users can check back as often as they'd like, multiple times a day.
@@ -50,7 +50,7 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
 
 **Stretch Stories**
 
-* [ ] User can click livestreaming link to watch the game
+* [ ] User can click a livestreaming link to watch the game
 * [ ] User can view a map to see games by location
 * [ ] User can view a calendar for games and set reminders
 
@@ -72,9 +72,9 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
     * Send PUT request to Parse server to add or remove a sport from the user's favorites based on their click of buttons
 
 * Detail - Games / Scores
-    * Use the AsyncHttpClient library to make network requests to each sport API and retrieve games and scores for the selected sport
-    * Parse JSON objects retrieved to display team names and scores
-    * Use the Glide library to display media (flags, logos) from source data
+    * Use the AsyncHttpClient library to make a network request to the API for the selected sport
+    * Parse retrieved JSON objects to display team names and scores
+    * Use the Glide library to display retrieved media (flags, logos)
 
 * Stream - Social
     * Query Parse server to retrieve reactions posted by any user, including 'created at' datetime and profile photos
@@ -89,7 +89,10 @@ An Android mobile app—browse sports, view scoring updates for domestic and int
     * Send POST request to Parse server to create new item and attribute to logged in user
     * Manually insert newly posted reaction in Social stream so it is immediately visible without the need for a full refresh
     
-* Profile
+* View Profile
+    * Query Parse server to retrieve profile information and image for selected user
+
+* Personal Profile
     * Query Parse server to retrieve profile information and image for logged in user
     * Use the Glide library to display default or user-selected profile photo
     * Launch smartphone camera to take new profile photo
