@@ -1,7 +1,9 @@
-Original App Design Project
+SPORTCAVE - Original App Design Project
 ===
 
-# SPORTCAVE
+## Demo - (12/27/21)
+
+<img src="SC_12-27.gif" width=200><br>
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -167,9 +169,5 @@ URL: https://www.figma.com/file/9bkalDyIyTSFFvTYLGldzO/SportCave?node-id=0%3A1
 * Personal Profile
   * (Read/GET) Query logged in User object and display profile attributes
   * (Update/PUT) Update user profile attributes
-
-## SportCave App - (12/27/21)
-
-<img src="SC_12-27.gif" width=200><br>
 
 
